@@ -1,68 +1,91 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "The Mothership",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Projects",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "shared/architecture",
+              "shared/contributing",
+              "shared/glossary"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Virgo Core",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "virgo-core/index",
+              "virgo-core/getting-started/prerequisites",
+              "virgo-core/getting-started/installation",
+              "virgo-core/getting-started/first-deployment",
+              "virgo-core/core/goals",
+              "virgo-core/core/infrastructure",
+              {
+                "group": "Ansible Roles",
+                "pages": [
+                  "virgo-core/roles/system_user",
+                  "virgo-core/roles/proxmox_access",
+                  "virgo-core/roles/proxmox_network",
+                  "virgo-core/roles/proxmox_repository",
+                  "virgo-core/roles/proxmox_cluster",
+                  "virgo-core/roles/proxmox_ceph"
+                ]
+              },
+              {
+                "group": "Ansible Architecture",
+                "pages": [
+                  "virgo-core/design/ansible-philosophy",
+                  "virgo-core/design/ansible-design-patterns",
+                  "virgo-core/design/ansible-role-design",
+                  "virgo-core/design/ansible-playbook-design"
+                ]
+              },
+              {
+                "group": "Integration & Testing",
+                "pages": [
+                  "virgo-core/core/netbox-powerdns",
+                  "virgo-core/core/references"
+                ]
+              }
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Supernova MicroK8s Infrastructure",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "supernova-microk8s-infra/overview",
+              "supernova-microk8s-infra/deployment",
+              "supernova-microk8s-infra/troubleshooting"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Andromeda Orchestration",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "andromeda-orchestration/overview",
+              "andromeda-orchestration/playbooks",
+              "andromeda-orchestration/modules"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Zammad MCP",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "zammad-mcp/overview",
+              "zammad-mcp/setup",
+              "zammad-mcp/api"
             ]
           }
         ]
@@ -71,52 +94,36 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "GitHub",
+          "href": "https://github.com/basher83",
+          "icon": "github"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Contact",
+        "href": "mailto:your-email@example.com"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/basher83"
     }
   }
 }

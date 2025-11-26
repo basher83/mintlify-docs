@@ -1,0 +1,49 @@
+---
+title: "API Reference"
+description: "Zammad MCP API reference and examples"
+---
+
+# API Reference
+
+## Available Tools
+
+### get_ticket
+
+Retrieve a ticket by ID.
+
+```json
+{
+  "tool": "get_ticket",
+  "arguments": {
+    "ticket_id": 123
+  }
+}
+```
+
+### create_ticket
+
+Create a new ticket.
+
+```json
+{
+  "tool": "create_ticket",
+  "arguments": {
+    "title": "Ticket title",
+    "group": "Users",
+    "customer": "customer@example.com"
+  }
+}
+```
+
+### search_tickets
+
+Search for tickets.
+
+```json
+{
+  "tool": "search_tickets",
+  "arguments": {
+    "query": "status:open"
+  }
+}
+```

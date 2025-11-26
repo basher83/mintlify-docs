@@ -1,0 +1,44 @@
+---
+title: "Architecture Overview"
+description: "How all Mothership projects fit together"
+---
+
+# Architecture Overview
+
+This document provides a high-level overview of how all Mothership projects work together.
+
+## System Diagram
+
+```text
+┌─────────────────────────────────────────────────────┐
+│                  The Mothership                      │
+├─────────────────────────────────────────────────────┤
+│                                                      │
+│  ┌──────────────┐    ┌──────────────────────────┐   │
+│  │  Virgo Core  │───▶│  Supernova MicroK8s      │   │
+│  │  (Base)      │    │  (Kubernetes)            │   │
+│  └──────────────┘    └──────────────────────────┘   │
+│         │                       │                    │
+│         ▼                       ▼                    │
+│  ┌──────────────────────────────────────────────┐   │
+│  │           Andromeda Orchestration             │   │
+│  │           (Ansible + Terraform)               │   │
+│  └──────────────────────────────────────────────┘   │
+│                       │                              │
+│                       ▼                              │
+│  ┌──────────────────────────────────────────────┐   │
+│  │              Zammad MCP                       │   │
+│  │              (AI Integration)                 │   │
+│  └──────────────────────────────────────────────┘   │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+```
+
+## Project Relationships
+
+| Project | Depends On | Provides |
+|---------|------------|----------|
+| Virgo Core | - | Base infrastructure |
+| Supernova MicroK8s | Virgo Core | Kubernetes cluster |
+| Andromeda Orchestration | - | Automation tooling |
+| Zammad MCP | - | AI/MCP integration |

@@ -1,0 +1,39 @@
+---
+title: "Setup"
+description: "Install and configure Zammad MCP server"
+---
+
+# Setup
+
+## Prerequisites
+
+- Node.js 18+
+- Zammad instance with API access
+
+## Installation
+
+<Steps>
+  <Step title="Install Dependencies">
+    ```bash
+    npm install
+    ```
+  </Step>
+  <Step title="Configure Environment">
+    ```bash
+    cp .env.example .env
+    # Edit .env with your Zammad credentials
+    ```
+  </Step>
+  <Step title="Start Server">
+    ```bash
+    npm start
+    ```
+  </Step>
+</Steps>
+
+## Configuration
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| ZAMMAD_URL | Your Zammad instance URL | Yes |
+| ZAMMAD_TOKEN | API token | Yes |
